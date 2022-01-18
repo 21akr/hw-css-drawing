@@ -29,6 +29,15 @@
   height: 150px;
   border-radius: 46.7%;
   background: #f1d08e;
+  transition: .7s;
+}
+
+.head:hover .ears {
+  background: #f19d8e;
+}
+
+.head:hover {
+  background: #f19d8e;
 }
 
 .hair {
@@ -215,11 +224,13 @@
 }
 
 .ears {
+  border-collapse: collapse;
   position: absolute;
   bottom: 50%;
   height: 25px;
   width: 20px;
   background: #f1d08e;
+  transition: .7s;
 }
 
 .left-ear {
@@ -361,11 +372,6 @@
   border-top-right-radius: 70%;
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 10%;
-}
-
-.a-hitler {
-  background-repeat: no-repeat;
-  height: 100vh;
 }
 
 .moustache:hover {
