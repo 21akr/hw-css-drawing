@@ -1,0 +1,380 @@
+/* transition не работает на его тело */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  background: #bf8b67;
+}
+
+.canvas {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  height: 90%;
+  width: 90%;
+  border: 7px solid #fff8f3;
+}
+
+.head {
+  position: absolute;
+  top: 10%;
+  left: 45%;
+  position: absolute;
+  width: 120px;
+  height: 150px;
+  border-radius: 46.7%;
+  background: #f1d08e;
+}
+
+.hair {
+  position: absolute;
+}
+
+.line {
+  position: absolute;
+  height: 30px;
+  width: 2px;
+  background: #000;
+  z-index: 2;
+}
+
+.one {
+  top: 0.2%;
+  left: 39%;
+  border-top-left-radius: 7px;
+}
+
+.two {
+  left: 44%;
+}
+
+.three {
+  left: 49%;
+}
+
+.four {
+  left: 54%;
+}
+
+.five {
+  top: 0.2%;
+  left: 59%;
+  border-top-right-radius: 7px;
+}
+
+.eyebrows {
+  width: 20px;
+  height: 2px;
+  background: #000;
+  bottom: 75%;
+}
+
+.left-eyebrows {
+  position: absolute;
+  left: 18%;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.right-eyebrows {
+  position: absolute;
+  right: 18%;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.eyebrows::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #000;
+  bottom: -110%;
+}
+
+.left-eyebrows::after {
+  left: 80%;
+  transform: rotate(40deg);
+  border-top-left-radius: 350%;
+  border-bottom-right-radius: 500%;
+  border-top-right-radius: 100%;
+}
+
+.right-eyebrows::after {
+  right: 82%;
+  transform: rotate(140deg);
+  border-bottom-left-radius: 350%;
+  border-top-right-radius: 500%;
+  border-bottom-right-radius: 100%;
+}
+
+.eyebrows::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -78%;
+  width: 6px;
+  height: 2px;
+  background: #000;
+}
+
+.left-eyebrows::before {
+  left: -25%;
+  transform: rotate(-30deg);
+  border-top-left-radius: 100%;
+}
+
+.right-eyebrows::before {
+  right: -23%;
+  transform: rotate(30deg);
+  border-top-right-radius: 100%;
+}
+
+.eyes {
+  position: absolute;
+  height: 8.5px;
+  width: 25px;
+  background: white;
+  border: 0.7px inset black;
+  bottom: 65%;
+}
+
+.eyes::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2.5px;
+  width: 24.5px;
+  background: #f1d08e;
+  border: 0.7px inset black;
+  left: -5%;
+  bottom: 50%;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+}
+
+.right-eye {
+  position: absolute;
+  left: 15%;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+}
+
+.left-eye {
+  position: absolute;
+  right: 15%;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+}
+
+.eyeballs {
+  position: absolute;
+  right: 40%;
+  bottom: -2%;
+  height: 5px;
+  width: 5px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.nose {
+  position: absolute;
+  bottom: 40%;
+  right: 46%;
+  height: 27px;
+  width: 10px;
+  background: #f3bb4b;
+  border-radius: 7px;
+}
+
+.nose::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: -33.7%;
+  height: 10px;
+  width: 17px;
+  background: #f3bb4b;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 25%;
+}
+
+.ears {
+  position: absolute;
+  bottom: 50%;
+  height: 25px;
+  width: 20px;
+  background: #f1d08e;
+}
+
+.left-ear {
+  left: -10%;
+  border-top-left-radius: 70%;
+  border-bottom-left-radius: 70%;
+}
+
+.right-ear {
+  right: -10%;
+  border-top-right-radius: 70%;
+  border-bottom-right-radius: 70%;
+}
+
+.moustache {
+  position: absolute;
+  bottom: 31%;
+  left: 44.5%;
+  height: 9px;
+  width: 13px;
+  background: #000;
+  border-radius: 0.2px;
+  transition: 1s;
+}
+
+.mouth {
+  position: absolute;
+  bottom: 20%;
+  left: 35%;
+  height: 7px;
+  width: 22px;
+  background: #f3a45a;
+  border-bottom: 0.1px solid #fc7e08;
+  border-top: 0.2px solid #fc7e08;
+}
+
+.mouth::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 0%;
+  height: 7px;
+  width: 22px;
+  background: #f3a45a;
+  border-top: 0.2px solid #fc7e08;
+  border-bottom: 0.1px solid #fc7e08;
+}
+
+.left {
+  border-bottom-left-radius: 500%;
+  border-bottom-right-radius: 100%;
+}
+
+.left::after {
+  content: "";
+  display: block;
+  border-top-left-radius: 100%;
+}
+
+.right {
+  position: absolute;
+  left: 47%;
+  bottom: 20%;
+  border-bottom-right-radius: 500%;
+  border-bottom-left-radius: 100%;
+}
+
+.right::after {
+  content: "";
+  display: block;
+  border-top-right-radius: 100%;
+}
+
+.body {
+  position: absolute;
+  top: 32%;
+  left: 45%;
+  height: 280px;
+  width: 115px;
+  background: linear-gradient(180deg, #302b20, rgb(0, 0, 0));
+  border-radius: 30%;
+  cursor: pointer;
+}
+
+.body:hover {
+  position: absolute;
+  top: 32%;
+  left: 45%;
+  height: 280px;
+  width: 115px;
+  background-image: url(/assets/images/nazi.png);
+  background-position: center;
+  background-attachment: local;
+  background-size: 70px;
+  border-radius: 30%;
+}
+
+.arms {
+  position: absolute;
+  bottom: 60%;
+  height: 220px;
+  width: 25px;
+  background: linear-gradient(180deg, #3d3624, rgb(0, 0, 0));
+  z-index: 2;
+}
+
+.left-arm {
+  left: -80%;
+  transform: rotate(130deg);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 70%;
+  border-bottom-left-radius: 200%;
+  border-bottom-right-radius: 10%;
+}
+
+.right-arm {
+  bottom: 40%;
+  right: -10%;
+  height: 110px;
+  transform: rotate(7deg);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 70%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 10%;
+}
+
+.right-arm::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -30%;
+  left: -150%;
+  transform: rotate(120deg);
+  height: 110px;
+  width: 25px;
+  background: #000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 70%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 10%;
+}
+
+.a-hitler {
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.moustache:hover {
+  position: absolute;
+  bottom: 31%;
+  left: 44.5%;
+  height: 10px;
+  width: 14px;
+  background: #333333;
+  border-radius: 0.2px;
+  transition: 0.8s;
+}
